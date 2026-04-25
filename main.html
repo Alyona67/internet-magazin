@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet TechStore</title>
+    <title>Internet TechStore - products</title>
+    <link rel = "icon" type = "image/x-icon" href = "images/icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,36 +12,125 @@
 <body>
     <header>
         <div class = "logo">
-            <a href = "/">
+            <a href = "main.html">
                 <img src = "images/logo2.jpg" alt = "Логотип компании">
                 <span>TechStore</span>
             </a>
         </div>
 
-        <nav>
+        <nav class = "nav-menu" id = "navMenu">
             <ul>
-                <li><a href = "/" class = "active">Products</a></li>
+                <li><a href = "main.html">Products</a></li>
                 <li><a href = "categories.html">Categories</a></li>
                 <li><a href = "deals.html">Deals</a></li>
                 <li><a href = "about.html">About</a></li>
             </ul>
         </nav>
 
-        <div class="header-icons">
-            <a href="#" class="search-btn">
-                <img src="images/loupe3.png" alt="Поиск">
+        <div class = "header-icons">
+            <div class = "search-product">
+                <input type = "text" id = "search-input" class = "search-input" placeholder = "Search products...">
+                <a href = "#" class = "search-btn" id = "search-btn">
+                    <img src = "images/loupe3.png" alt = "Search">
+                </a>
+            </div>
+
+            <a href = "cart.html" class = "cart-btn">
+                <img src = "images/cart.png" alt = "Cart">
+                <span id = "cart-count" class = "cart-count"></span>
             </a>
-            <a href="#" class="cart-btn">
-                <img src="images/cart.png" alt="Корзина">
-            </a>
+        </div>
+
+        <div class = "burger-btn" id = "burgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
 
 
-    <main>
-        <div class = "container">
+    <main class = "main-products">
+        <div class = "name-filters">
             <h1>Premium Electronics</h1>
             <p>Discover our curated collection of high-quality tech products</p>
+        </div>
+
+        <div class = "filters-second-row">
+            <div class = "filter-toggle-btn-product-count">
+                <div class = "filter-toggle-btn" id = "filterToggleBtn">
+                    <img src = "images/filter.png" alt = "filter">
+                    <span>Filters</span>
+                </div>
+
+                <div class = "product-count" id = "product-count"></div>
+            </div>
+
+            <div class = "sort-panel">
+                <p>Sort by:</p>
+                <select id = "panel">
+                    <option value = "name-a-z">Name (A-Z)</option>
+                    <option value = "name-z-a">Name (Z-A)</option>
+                    <option value = "price-low-high">Price (Low to High)</option>
+                    <option value = "price-high-low">Price (High to Low)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class = "filters">
+            <div class = "filters-price-rating">
+                <button class = "close-filters" id = "closeFiltersBtn">✕</button>
+                <div class = "filter-img">
+                    <img src = "images/filter.png">
+                    <h3>Filters</h3>
+                </div>
+
+                <div class = "filter-checkbox">
+                    <h3>Rating</h3>
+
+                    <div class = "filter-panel">
+                        <label>
+                            <input type = "checkbox" name = "rating" value = "5"> 5+ Stars  
+                        </label>
+
+                        <label>
+                            <input type = "checkbox" name = "rating" value = "4"> 4+ Stars 
+                        </label>
+
+                        <label>
+                            <input type = "checkbox" name = "rating" value = "3"> 3+ Stars
+                        </label>
+                    </div>
+                </div>
+
+                <div class = "filter-price">
+                    <div class = "filter-price-name">
+                        <h3>Price Range</h3>
+                    </div>
+
+                    <div class="filter-price-slider">
+                        <div class="price-slider">
+                            <div class="slider-track"></div>
+                            <input type = "range" min = "0" max= "3000" step = "50" value = "0" class = "slider slider-min" id = "sliderMin">
+                            <input type = "range" min = "0" max= "3000" step = "50" value = "3000" class = "slider slider-max" id = "sliderMax">
+                        </div>
+                    </div>
+
+                    <div class="price-display">
+                        <span>$<span id = "minPrice">0</span></span>
+                        <span>$<span id = "maxPrice">3000</span></span>
+                    </div>
+                </div>
+
+                <div class = "clear-filters-btn">
+                    <button class = "clear-btn" onclick = "clearFilters()">
+                        Clear All Filters
+                    </button>
+                </div>
+            </div>
+
+            <div class = "filters-products">
+                <div class = "filters-all-products" id = "filters-all-products">
+            </div>
         </div>
     </main>
 
@@ -78,7 +168,7 @@
                         <li><a href = "main.html">Shop All Products</a></li>
                         <li><a href = "deals.html">Special Deals</a></li>
                         <li><a href = "about.html">About Us</a></li>
-                        <li><a href = "contact.html">Contact Support</a></li>
+                        <li><a href = "#">Contact Support</a></li>
                     </ul>
                 </div>
             </div>
@@ -128,5 +218,12 @@
             </div>
         </div>
     </footer>
+
+    <script src = "js/data.js"></script>
+    <script src = "js/card_description.js"></script>
+    <script src = "js/main.js"></script>
+    <script src = "js/search_click.js"></script>
+    <script src = "js/burger_btn.js"></script>
+    <script src = "js/filter_menu.js"></script>
 </body>
 </html>

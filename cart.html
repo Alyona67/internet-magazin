@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet TechStore - deals</title>
+    <title>Internet TechStore - product</title>
     <link rel = "icon" type = "image/x-icon" href = "images/icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -17,7 +17,7 @@
                 <span>TechStore</span>
             </a>
         </div>
-
+        
         <nav class = "nav-menu" id = "navMenu">
             <ul>
                 <li><a href = "main.html">Products</a></li>
@@ -48,35 +48,9 @@
         </div>
     </header>
 
-    <main class = "main-deals">
-        <div class = "deals-one">
-            <div class = deals-icon>
-                <h1><img src = "images/sale3.png" alt = "Ценник">Special Deals</h1>
-                <p>Limited time offers on our best products - Don't miss out!</p> 
-            </div>
-
-            <div class = "deals-two">
-                <div class = "deals-columns-one">
-                    <h2>Flash Sale Event</h2>
-                    <p>Save up to 30% on selected items</p>
-                </div>
-
-                <div class = "deals-columns-two">
-                    <h3><img src = "images/hours.png" alt = "Часы">Ends in 2 days</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class = "deals-cards" id = "deals-cards"></div>
-
-        <div class = "deals-button">
-            <p>Want to see more products?</p>
-            <button class = "button" onclick = "location.href = 'main.html'">
-                Brouse All Products
-            </button>
-        </div>
+    <main class = "cart-products">
+        <div class = "cart-container" id = "cart-container">
     </main>
-
 
     <footer>
         <div class = "footerr">
@@ -164,8 +138,7 @@
     </footer>
 
     <script src = "js/data.js"></script>
-    <script src = "js/card_description.js"></script>
-    <script src = "js/cards.js"></script>
+    <script src = "js/cart.js"></script>
     <script src = "js/search_click.js"></script>
     <script src = "js/burger_btn.js"></script>
 </body>

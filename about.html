@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet TechStore</title>
+    <title>Internet TechStore - about</title>
+    <link rel = "icon" type = "image/x-icon" href = "images/icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,13 +12,13 @@
 <body>
     <header>
         <div class = "logo">
-            <a href = "/">
+            <a href = "main.html">
                 <img src = "images/logo2.jpg" alt = "Логотип компании">
                 <span>TechStore</span>
             </a>
         </div>
 
-        <nav>
+        <nav class = "nav-menu" id = "navMenu">
             <ul>
                 <li><a href = "main.html">Products</a></li>
                 <li><a href = "categories.html">Categories</a></li>
@@ -26,13 +27,24 @@
             </ul>
         </nav>
 
-        <div class="header-icons">
-            <a href="#" class="search-btn">
-                <img src="images/loupe3.png" alt="Поиск">
+        <div class = "header-icons">
+            <div class = "search-product">
+                <input type = "text" id = "search-input" class = "search-input" placeholder = "Search products...">
+                <a href = "#" class = "search-btn" id = "search-btn">
+                    <img src = "images/loupe3.png" alt = "Search">
+                </a>
+            </div>
+
+            <a href = "cart.html" class = "cart-btn">
+                <img src = "images/cart.png" alt = "Cart">
+                <span id = "cart-count" class = "cart-count"></span>
             </a>
-            <a href="#" class="cart-btn">
-                <img src="images/cart.png" alt="Корзина">
-            </a>
+        </div>
+
+        <div class = "burger-btn" id = "burgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
 
@@ -185,7 +197,7 @@
                         <li><a href = "main.html">Shop All Products</a></li>
                         <li><a href = "deals.html">Special Deals</a></li>
                         <li><a href = "about.html">About Us</a></li>
-                        <li><a href = "contact.html">Contact Support</a></li>
+                        <li><a href = "#">Contact Support</a></li>
                     </ul>
                 </div>
             </div>
@@ -235,5 +247,10 @@
             </div>
         </div>
     </footer>
+
+    <script src = "js/data.js"></script>
+    <script src = "js/card_description.js"></script>
+    <script src = "js/search_click.js"></script>
+    <script src = "js/burger_btn.js"></script>
 </body>
 </html>
