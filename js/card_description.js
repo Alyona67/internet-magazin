@@ -41,6 +41,7 @@ function formatKeyName(key) {
     return formatted.trim();
 }
 
+
 function renderKeyHighlights(highlights) {  
     return `
         <div class = "key-highlights">
