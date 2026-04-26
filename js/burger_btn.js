@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const burgerBtn = document.getElementById('burgerBtn');
     const navMenu = document.getElementById('navMenu');
     
+    
     if (burgerBtn && navMenu) {
         burgerBtn.onclick = function() {
             burgerBtn.classList.toggle('active');
