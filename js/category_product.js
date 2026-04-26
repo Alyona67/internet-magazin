@@ -40,6 +40,7 @@ function updateCartCount() {
     }
 }
 
+
 function displayCategoryProducts() {
     const container = document.getElementById('common-category');
 
