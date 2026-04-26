@@ -1,6 +1,7 @@
 const filterToggleBtn = document.getElementById('filterToggleBtn');
 const filtersPanel = document.querySelector('.filters-price-rating');
 const closeFiltersBtn = document.getElementById('closeFiltersBtn');
+
 let overlay = null;
 
 function createOverlay() {
