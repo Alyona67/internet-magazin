@@ -109,26 +109,28 @@ function displayCart() {
                                     <img src = "${item.image}" class = "main-cart-item-img">
                                 </div>
 
-                                <div class = "cart-item-column-two">
-                                    <div class = "name-and-category">
-                                        <a href = "card.html?id=${item.id}" class = "cart-product-name-link">
-                                            <h6>${item.name}</h6>
-                                        </a>
-                                        <p>${categoryName}</p>
+                                <div class = "cart-item-two">
+                                    <div class = "cart-item-column-two">
+                                        <div class = "name-and-category">
+                                            <a href = "card.html?id=${item.id}" class = "cart-product-name-link">
+                                                <h6>${item.name}</h6>
+                                            </a>
+                                            <p>${categoryName}</p>
+                                        </div>
+
+                                        <div class = "main-cart-item-quantity">
+                                            <button class = "cart-qty-btn" onclick = "updateQuantity(${index}, -1)" ${item.quantity <= 1 ? 'disabled' : ''}>-</button>
+                                            <span>${item.quantity}</span>
+                                            <button class = "cart-qty-btn" onclick = "updateQuantity(${index}, 1)">+</button>
+                                        </div>
                                     </div>
 
-                                    <div class = "main-cart-item-quantity">
-                                        <button class = "cart-qty-btn" onclick = "updateQuantity(${index}, -1)" ${item.quantity <= 1 ? 'disabled' : ''}>-</button>
-                                        <span>${item.quantity}</span>
-                                        <button class = "cart-qty-btn" onclick = "updateQuantity(${index}, 1)">+</button>
-                                    </div>
-                                </div>
-
-                                <div class = "cart-item-column-three">
-                                    <img src = "images/delete.png" class = "cart-item-delete" onclick = "removeFromCart(${index})">
-                                    <div class = "cart-item-product-price">
-                                        <div class = "cart-item-total">$${(item.price * item.quantity).toFixed(2)}</div>
-                                        <div class = "main-cart-item-price">$${item.price} each</div>
+                                    <div class = "cart-item-column-three">
+                                        <img src = "images/delete.png" class = "cart-item-delete" onclick = "removeFromCart(${index})">
+                                        <div class = "cart-item-product-price">
+                                            <div class = "cart-item-total">$${(item.price * item.quantity).toFixed(2)}</div>
+                                            <div class = "main-cart-item-price">$${item.price} each</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
